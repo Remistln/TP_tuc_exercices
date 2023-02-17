@@ -33,4 +33,11 @@ jobs:
         run: | 
           uvicorn application.main:app &
           locust --config=tests/.locust.conf --locustfile=tests/locustfile.py --headless
+      - name: Install requirements
+        run: |
+          python -m pip install selenium
+      - name : run code
+        run: |
+          python selenium_title.py
+      
 
