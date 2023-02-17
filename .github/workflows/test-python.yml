@@ -38,6 +38,6 @@ jobs:
           python -m pip install selenium
       - name : run code
         run: |
-          python selenium_title.py
+          python application/selenium_title.py
       
 
