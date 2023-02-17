@@ -29,3 +29,7 @@ jobs:
       - name: Report Coverage
         run : |
           coverage report
+      - name: Run Load Test
+        run: | 
+          locust --headless
+
