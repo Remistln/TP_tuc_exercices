@@ -31,5 +31,6 @@ jobs:
           coverage report
       - name: Run Load Test
         run: | 
-          locust --headless
+          uvicorn application.main:app &
+          locust --config=tests/.locust.conf --locustfile=tests/locustfile.py --headless
 
